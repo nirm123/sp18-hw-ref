@@ -18,6 +18,7 @@ def is_unique(word):
 def is_anagram(w1, w2):
     """
     Given two strings, returns if they are anagrams of each other.
+    This function is case-SENSITIVE.
     
     Args:
         (str) w1: an input string
@@ -36,7 +37,7 @@ def tic_tac_toe(arr):
         - They have all spaces in a column
         - They have all spaces in a diagonal
 
-    Example Array:
+    Example Array (no brackets for clarity)
 
     X O X X
     - X O O
@@ -78,9 +79,16 @@ def matrix_transpose(matrix):
     [[1, 3, 5], [2, 4, 6]]
 
     Example 2:
-    Input: [['a','b','c','d'],['e','f','g','h'],['i','j','k','l'],['m','n','o','p']]
+    Input:
+        [['a','b','c','d'],
+         ['e','f','g','h'],
+         ['i','j','k','l'],
+         ['m','n','o','p']]
     Output:
-    [['a', 'e', 'i', 'm'], ['b', 'f', 'j', 'n'], ['c', 'g', 'k', 'o'], ['d', 'h', 'l', 'p']]
+        [['a','e','i','m'],
+         ['b','f','j','n'],
+         ['c','g','k','o'],
+         ['d','h','l','p']]
 
     Args:
         [[object]] matrix: a 2d array of arbitrary rectangular size with arbitrary data elements
@@ -116,9 +124,9 @@ def initialize_counts(minefield):
     For example, suppose you are given a 3 * 4 minefield with two mines, one
     at (0,2) and the other at (1, 0). minefield would look like this:
 
-    minefield = [ [ 0, 0, -1, 0],
-                  [-1, 0,  0, 0],
-                  [ 0, 0,  0, 0] ]
+    minefield = [[ 0, 0, -1, 0],
+                 [-1, 0,  0, 0],
+                 [ 0, 0,  0, 0] ]
 
     You can see that the counts for the mine-free tiles are not yet calculated.
     Recall that each mine-free tile should contain the number of neighboring
@@ -128,15 +136,15 @@ def initialize_counts(minefield):
     For the above example, here’s what minefield should look like when
     initialize_counts returns:
 
-    [ [ 1, 2, -1, 1],
-      [-1, 2,  1, 1],
-      [ 1, 1,  0, 0] ]
+    [[ 1, 2, -1, 1],
+     [-1, 2,  1, 1],
+     [ 1, 1,  0, 0] ]
 
     Notes:
         * Do not return a new array -- update the one passed in as an argument
         * Do not change the mines. In other words, if an index contains -1
-          before initialize_counts runs, it should contain -1 after
-          initialize_counts runs
+        before initialize_counts runs, it should contain -1 after
+        initialize_counts runs
 
     Args:
         (List[List[int]]) minefield: 2D array representing the minefield
