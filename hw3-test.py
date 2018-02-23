@@ -34,7 +34,6 @@ class tester_tic_tac_toe(unittest.TestCase):
 
 class tester_matrix_transpose(unittest.TestCase):
 	
-	@timeout_decorator.timeout(SHORT_TIMEOUT)
 	def test__given(self):
 		self.assertEqual(
 			matrix_transpose([[1,2],[3,4],[5,6]]),
