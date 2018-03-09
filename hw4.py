@@ -12,6 +12,7 @@ class Node(object):
         self.data = data
         self.next_node = next_node
 
+
 def list_length(head):
     """
     Given a linked list, returns the length ofthe linked list.
